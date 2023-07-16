@@ -1,15 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <LineChart :data="data"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LineChart from './components/LineChart.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    LineChart
+  },
+  data() {
+    return {
+      data: [10, 20, 30, 25, 35, 40, 30, 45, 50, 55],
+    }
   }
 }
 </script>
